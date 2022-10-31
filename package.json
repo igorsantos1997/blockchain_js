@@ -4,7 +4,8 @@
   "description": "",
   "main": "Block.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn ./src/start/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,15 @@
   },
   "homepage": "https://github.com/igorsantos1997/blockchain_js#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jest": "^29.2.0",
+    "jest": "^29.2.2",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
   }
 }
